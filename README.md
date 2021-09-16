@@ -6,7 +6,7 @@ Interactive AI Character:
 - Video Projection and DATA Transaction
 - AI behaviour and Deep Learning
 # Project Documents
-*** Google Drive Link: https://drive.google.com/drive/u/0/folders/1j5qABmOG9wIJpyJAjo0Ev4eBGWLs_8vg
+***Google Drive Link: https://drive.google.com/drive/u/0/folders/1j5qABmOG9wIJpyJAjo0Ev4eBGWLs_8vg
 
 # API:
 - Oculus LipSync
