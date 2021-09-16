@@ -16,7 +16,39 @@ Interactive AI Character:
 - Watson SDK
 - Google Cloud API 
 
-# Project Configuration:
+## Project Configuration:
+
+#Blend Shapes Preset
+
+after importing the character (with sets of blend shapes and propper Rig), It is time to configure facial expressions that used by runtime for procedural animations.
+
+- Right Click on Project Window -> Create -> DINA -> Blend Shapes Mapper.
+
+ ![01](https://user-images.githubusercontent.com/50558401/133633689-d97ee221-2556-45b6-bb7f-556b655b76c6.JPG)
+ 
+ - Properly name your Blend Shape Mapper
+ 
+ ![02](https://user-images.githubusercontent.com/50558401/133634161-4561573a-4ca5-443e-9c16-6e74b13a57f4.JPG)
+ 
+- Click on Window -> DINA Project -> Blend Shape Mapper Editor.
+
+![Screenshot (4)](https://user-images.githubusercontent.com/50558401/133634374-d82cb1ec-7e8b-4bd0-b4bf-2343396f97c4.png)
+
+- Drag and drop the mapper preset created
+
+![03](https://user-images.githubusercontent.com/50558401/133635133-2423f788-9319-4106-b6ba-d584713a293e.JPG)
+
+
+- Select the facial expression to be edited
+- Drag and drop the gameobject with blendshapes
+- adjust blend shapes values to match the selected facial expression.
+- save the current values using Save blend shape values button.
+- reset the blend shape values to configure the new one
+
+***The creted preset can be used for every character based on the same set of blendshapes.***
+
+
+
 
 
 
