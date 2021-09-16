@@ -23,7 +23,7 @@ public class CH_GazeInterestField : MonoBehaviour
 
     private void OnTriggerEnter(Collider target)
     {
-        // No need to check the target tag, as the probabilistic gaze configurator editor tool set the collision matrix to only enable VHPGazeComponents self collisions.
+        // No need to check the target tag, as the probabilistic gaze configurator editor tool set the collision matrix to only enable CH_GazeComponents self collisions.
         GazeTargets.Add(target.transform);
     }
 

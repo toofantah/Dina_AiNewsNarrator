@@ -7,7 +7,7 @@ using UnityEngine;
 public class CH_Manager : MonoBehaviour
 {
     [Header("Preset settings:")]
-    [Tooltip("Blend shapes preset matching the character's template. Use Window -> Virtual Human Project -> Blend Shapes Mapper Editor to create a new preset.")]
+    [Tooltip("Blend shapes preset matching the character's template. Use Window -> DINA Project -> Blend Shapes Mapper Editor to create a new preset.")]
     public BlendShapesMapper blendShapesMapperPreset;
 
     public int TotalCharacterBlendShapes { get; private set; } = 0;
@@ -35,7 +35,7 @@ public class CH_Manager : MonoBehaviour
         }
 
         // Getting the skinned mesh renderers with blend shapes of the character to use procedural facial animations.
-        // Has to be executed in the Awake function as other VHP scripts require the total blend shape number to set their respective blenshapes values lists.
+        // Has to be executed in the Awake function as other CH_ scripts require the total blend shape number to set their respective blenshapes values lists.
         GetSkinnedMeshRenderersWithBlendShapes(gameObject);
     }
 
@@ -85,7 +85,7 @@ public class CH_Manager : MonoBehaviour
             Debug.LogWarning("No skinned mesh renderer with blend shapes detected on the character.");
     }
 
-    // Function to get all the VHP components.
+    // Function to get all the CH_ components.
     private void GetCHComponents()
     {
         if (gameObject.GetComponent<CH_Emotions>())
@@ -221,7 +221,7 @@ public class CH_Manager : MonoBehaviour
         {
             int blendshapeIndex = 0;
 
-            // For each skinned mesh renderer of the character all the blend shapes are updated according to list of values sent to the VHP manager.
+            // For each skinned mesh renderer of the character all the blend shapes are updated according to list of values sent to the CH_manager.
             foreach (SkinnedMeshRenderer skinnedMeshRenderer in m_skinnedMeshRenderersWithBlendShapes)
             {
                 for (int i = 0; i < skinnedMeshRenderer.sharedMesh.blendShapeCount; i++)

@@ -66,7 +66,7 @@ public class CH_Gaze : MonoBehaviour
     // Property to access the initial target position.
     public Vector3 NeutralTargetPosition { get { return m_neutralTarget.transform.position; } }
 
-    // Lists to copy the max values for the each gaze direction from the blend shapes preset added to the VHP manager.
+    // Lists to copy the max values for the each gaze direction from the blend shapes preset added to the CH manager.
     private List<float> m_blinkBlendShapeValues = new List<float>();
     private List<float> m_gazeUpBlendShapeValues = new List<float>();
     private List<float> m_gazeDownBlendShapeValues = new List<float>();
@@ -81,7 +81,7 @@ public class CH_Gaze : MonoBehaviour
     [HideInInspector, Range(0, 100)] public float gazeUp = 0f;
     [HideInInspector, Range(0, 100)] public float gazeDown = 0f;
 
-    // Delegate and event allowing the VHP manager to subscribe with a function that updates the character's blend shapes with the new gaze values as soon as they get updated.
+    // Delegate and event allowing the CH manager to subscribe with a function that updates the character's blend shapes with the new gaze values as soon as they get updated.
     public delegate void OnGazeChangeDelegate(float[] currentGazeBlendShapeValues);
     public event OnGazeChangeDelegate OnGazeChange;
 
@@ -208,21 +208,21 @@ public class CH_Gaze : MonoBehaviour
 
     #region Loading blend shape values
 
-    // Function to load the gaze max values from the blend shapes mapper added to the VHP manager.
+    // Function to load the gaze max values from the blend shapes mapper added to the CH manager.
     private void LoadBlendshapesValues()
     {
-        // Loading the blendshapes mapper values to be used for procedural gaze if a mapper preset is added to the VHP manager.
+        // Loading the blendshapes mapper values to be used for procedural gaze if a mapper preset is added to the CH manager.
         if (m_CHmanager.blendShapesMapperPreset)
         {
             BlendShapesMapper blendShapesMapper = m_CHmanager.blendShapesMapperPreset;
 
-            // Calling the function to copy the values from the blendshapes mapper added to the VHP manager.
+            // Calling the function to copy the values from the blendshapes mapper added to the CH manager.
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.BLINK), m_blinkBlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.GAZEUP), m_gazeUpBlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.GAZEDOWN), m_gazeDownBlendShapeValues);
         }
 
-        // Displaying a warning message if no blendshapes mapper is added to the VHP manager.
+        // Displaying a warning message if no blendshapes mapper is added to the CH manager.
         else
         {
             Debug.LogWarning("No blend shapes preset. Procedural gaze won't be initialized");
@@ -230,7 +230,7 @@ public class CH_Gaze : MonoBehaviour
         }
     }
 
-    // Function to copy the values from the blend shapes mapper added to the VHP manager.
+    // Function to copy the values from the blend shapes mapper added to the CH manager.
     private void CopyBlendshapesMappersValues(List<float> blendShapesMapperValues, List<float> gazeBlendShapeValues)
     {
         for (int i = 0; i < blendShapesMapperValues.Count; i++)
@@ -321,7 +321,7 @@ public class CH_Gaze : MonoBehaviour
             m_interestFieldInstance.transform.GetComponent<MeshCollider>().enabled = !agentMode;
             m_interestFieldInstance.transform.GetComponent<SphereCollider>().enabled = agentMode;
 
-            m_target.GetComponent<CH_GazeTarget>().VHPGazeInterestField = m_interestFieldInstance.GetComponent<CH_GazeInterestField>();
+            m_target.GetComponent<CH_GazeTarget>().CH_GazeInterestField = m_interestFieldInstance.GetComponent<CH_GazeInterestField>();
 
             m_characterModeSet = agentMode;
             m_interestFieldLoaded = true;
@@ -497,7 +497,7 @@ public class CH_Gaze : MonoBehaviour
 
     #region Updating gaze's blend shape values
 
-    // Function to update the current gaze's blend shape values and to trigger the event to allow the VHP manager to update the character's blend shapes with these new gaze's values.
+    // Function to update the current gaze's blend shape values and to trigger the event to allow the CH manager to update the character's blend shapes with these new gaze's values.
     private void UpdateGazeBlendShapeValues()
     {
         float[] currentGazeBlendShapeValues = new float[m_CHmanager.TotalCharacterBlendShapes];

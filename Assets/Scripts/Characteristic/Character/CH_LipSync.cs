@@ -21,13 +21,13 @@ public class CH_LipSync : MonoBehaviour
     [Tooltip("Lip synchronisation mode (realtime: based on mic input; pre-recorded: based on audio source clip).")]
     public LipSyncMode lipSyncMode;
 
-    // Delegate and event allowing the VHP manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
+    // Delegate and event allowing the CH manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
     public delegate void OnLipChangeDelegate(float[] currentLipBlendShapeValues);
     public event OnLipChangeDelegate OnLipChange;
 
     private List<float> m_visemesIntensityValues = new List<float>();
 
-    // Lists to copy the max values for each viseme from the blend shapes preset added to the VHP manager.
+    // Lists to copy the max values for each viseme from the blend shapes preset added to the CH manager.
     private List<float> m_viseme_sil_BlendShapeValues = new List<float>();
     private List<float> m_viseme_PP_BlendShapeValues = new List<float>();
     private List<float> m_viseme_FF_BlendShapeValues = new List<float>();
@@ -131,15 +131,15 @@ public class CH_LipSync : MonoBehaviour
 
     #region Loading blend shapes max values
 
-    // Function to load the visemes max values from the blend shapes mapper added to the VHP manager.
+    // Function to load the visemes max values from the blend shapes mapper added to the CH manager.
     private void LoadBlendShapeValues()
     {
-        // Loading the blend shapes mapper values to be used for lip synchronization if a mapper preset is added to the VHP manager.
+        // Loading the blend shapes mapper values to be used for lip synchronization if a mapper preset is added to the CH manager.
         if (m_CHmanager.blendShapesMapperPreset)
         {
             BlendShapesMapper blendShapesMapper = m_CHmanager.blendShapesMapperPreset;
 
-            // Calling the function to copy the values from the blend shapes mapper added to the VHP manager.
+            // Calling the function to copy the values from the blend shapes mapper added to the CH manager.
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.VISEME_sil), m_viseme_sil_BlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.VISEME_PP), m_viseme_PP_BlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.VISEME_FF), m_viseme_FF_BlendShapeValues);
@@ -157,7 +157,7 @@ public class CH_LipSync : MonoBehaviour
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.VISEME_U), m_viseme_U_BlendShapeValues);
         }
 
-        // Displaying a warning message if no blend shapes mapper is added to the VHP manager.
+        // Displaying a warning message if no blend shapes mapper is added to the CH manager.
         else
         {
             Debug.LogWarning("No blend shapes mapper preset. Lip synchronization won't be initialized");
@@ -165,7 +165,7 @@ public class CH_LipSync : MonoBehaviour
         }
     }
 
-    // Function to copy the values from the blend shapes mapper added to the VHP manager.
+    // Function to copy the values from the blend shapes mapper added to the CH manager.
     private void CopyBlendshapesMappersValues(List<float> blendShapesMapperValues, List<float> visemesBlendShapeValues)
     {
         for (int i = 0; i < blendShapesMapperValues.Count; i++)

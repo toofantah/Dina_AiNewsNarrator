@@ -26,13 +26,13 @@ public class CH_Emotions : MonoBehaviour
     [Range(0, 100)] public float sadness = 0f;
     [Range(0, 100)] public float surprise = 0f;
 
-    // Delegate and event allowing the VHP manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
+    // Delegate and event allowing the CH manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
     public delegate void OnEmotionChangeDelegate(float[] currentEmotionsBlendShapeValues);
     public event OnEmotionChangeDelegate OnEmotionsChange;
 
     private CH_Manager m_CHmanager;
 
-    // Lists to copy the max values for each emotion from the blend shapes preset added to the VHP manager.
+    // Lists to copy the max values for each emotion from the blend shapes preset added to the CH manager.
     private List<float> m_angerBlendShapeValues = new List<float>();
     private List<float> m_disgustBlendShapeValues = new List<float>();
     private List<float> m_fearBlendShapeValues = new List<float>();
@@ -77,15 +77,15 @@ public class CH_Emotions : MonoBehaviour
 
     #region Loading blend shape values
 
-    // Function to load the emotions max values from the blend shapes mapper added to the VHP manager.
+    // Function to load the emotions max values from the blend shapes mapper added to the CH manager.
     private void LoadBlendShapeValues()
     {
-        // Loading the blend shapes mapper values to be used for procedural emotions if a mapper preset is added to the VHP manager.
+        // Loading the blend shapes mapper values to be used for procedural emotions if a mapper preset is added to the CH manager.
         if (m_CHmanager.blendShapesMapperPreset)
         {
             BlendShapesMapper blendShapesMapper = m_CHmanager.blendShapesMapperPreset;
 
-            // Calling the function to copy the values from the blendshapes mapper added to the VHP manager.
+            // Calling the function to copy the values from the blendshapes mapper added to the CH manager.
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.ANGER), m_angerBlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.DISGUST), m_disgustBlendShapeValues);
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.FEAR), m_fearBlendShapeValues);
@@ -94,7 +94,7 @@ public class CH_Emotions : MonoBehaviour
             CopyBlendshapesMappersValues(blendShapesMapper.GetBlenShapeValues(BlendShapesMapper.FacialExpression.SURPRISE), m_surpriseBlendShapeValues);
         }
 
-        // Displaying a warning message if no blend shapes mapper is added to the VHP manager.
+        // Displaying a warning message if no blend shapes mapper is added to the CH manager.
         else
         {
             Debug.LogWarning("No blend shapes preset. Procedural emotions won't be initialized");
@@ -102,7 +102,7 @@ public class CH_Emotions : MonoBehaviour
         }
     }
 
-    // Function to copy the values from the blend shapes mapper added to the VHP manager.
+    // Function to copy the values from the blend shapes mapper added to the CH manager.
     private void CopyBlendshapesMappersValues(List<float> blendShapesMapperValues, List<float> emotionBlendShapeValues)
     {
         for (int i = 0; i < blendShapesMapperValues.Count; i++)
@@ -171,7 +171,7 @@ public class CH_Emotions : MonoBehaviour
 
     #region Updating emotions blenshapes values
 
-    // Function to update the current emotion blend shape values and to trigger the event to allow the VHP manager to update the character's blend shapes with these new emotion's values.
+    // Function to update the current emotion blend shape values and to trigger the event to allow the CH manager to update the character's blend shapes with these new emotion's values.
     private void UpdateEmotionBlendShapeValues()
     {
         float[] currentEmotionBlendShapeValues = new float[m_CHmanager.TotalCharacterBlendShapes];

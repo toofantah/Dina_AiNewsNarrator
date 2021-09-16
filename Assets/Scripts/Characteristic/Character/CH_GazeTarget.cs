@@ -6,7 +6,7 @@ using UnityEngine;
 public class CH_GazeTarget : MonoBehaviour
 {
     public CH_Gaze CHGaze { get; set; }
-    public CH_GazeInterestField VHPGazeInterestField { get; set; }
+    public CH_GazeInterestField CH_GazeInterestField { get; set; }
 
     private CH_Gaze.GazeBehavior m_currentGazeBehavior = CH_Gaze.GazeBehavior.NONE;
 
@@ -101,7 +101,7 @@ public class CH_GazeTarget : MonoBehaviour
         Vector3 aimedTargetPosition;
 
         // Calling the target selection and the targets ponderation fuction when the interest field contains any target.
-        if (VHPGazeInterestField && VHPGazeInterestField.GazeTargets.Any())
+        if (CH_GazeInterestField && CH_GazeInterestField.GazeTargets.Any())
         {
             if (transform.parent != CHGaze.transform)
                 transform.parent = CHGaze.transform;
@@ -134,9 +134,9 @@ public class CH_GazeTarget : MonoBehaviour
         m_targetsPonderedPositions.Clear();
 
         // When a target enter or exit the interest field, a copy of the list of targets is stored.
-        if (m_targetListSize != VHPGazeInterestField.GazeTargets.Count)
+        if (m_targetListSize != CH_GazeInterestField.GazeTargets.Count)
         {
-            m_gazeTargets = new List<Transform>(VHPGazeInterestField.GazeTargets);
+            m_gazeTargets = new List<Transform>(CH_GazeInterestField.GazeTargets);
             m_targetsPonderedPositionsCopy.Clear();
 
             audioSources.Clear();
