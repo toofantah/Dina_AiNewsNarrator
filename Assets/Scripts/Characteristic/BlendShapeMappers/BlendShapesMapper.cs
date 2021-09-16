@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Dina/Blend Shapes Mapper")]
+[CreateAssetMenu(menuName = " DINA /Blend Shapes Mapper")]
 public class BlendShapesMapper : ScriptableObject
 {
     public enum FacialExpression
