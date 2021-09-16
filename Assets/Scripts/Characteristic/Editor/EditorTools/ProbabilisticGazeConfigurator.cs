@@ -13,7 +13,7 @@ public class ProbabilisticGazeConfigurator : EditorWindow
     private string m_targetPrefabFolder = "Assets/Virtual Human Project/Prefabs/";
     private bool m_deleteTargetSafetyEnabled = false;
 
-    [MenuItem("Window/Virtual Human Project/Probabilistic Gaze Configurator")]
+    [MenuItem("Window/DINA Project/Probabilistic Gaze Configurator")]
     public static void ShowWindow()
     {
         EditorWindow.GetWindow<ProbabilisticGazeConfigurator>("Probabilistic Gaze Configurator");
