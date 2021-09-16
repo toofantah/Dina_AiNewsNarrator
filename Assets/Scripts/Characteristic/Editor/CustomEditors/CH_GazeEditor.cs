@@ -29,7 +29,7 @@ public class CH_GazeEditor : Editor
         if (myCHGaze.gazeBehavior == CH_Gaze.GazeBehavior.PROBABILISTIC)
         {
             // Displaying an object field to add the interest field prefab if the gaze behavior of the character is set to probabilistic.
-            string interestFieldPrefabTooltip = "Add the Gaze Interest Field Prefab(Assets/Virtual Human Toolkit/Prefabs/).";
+            string interestFieldPrefabTooltip = "Add the Gaze Interest Field Prefab(Assets/DIINA Toolkit/Prefabs/).";
             EditorGUILayout.PropertyField(m_interestFieldPrefab, new GUIContent("Interest Field Prefab", interestFieldPrefabTooltip));
             //myVHTGaze.interestFieldPrefab = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Interest Field Prefab", interestFieldPrefabTooltip), myVHTGaze.interestFieldPrefab, typeof(GameObject), false)
 
