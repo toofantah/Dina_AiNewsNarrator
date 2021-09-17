@@ -8,10 +8,6 @@ Interactive AI Character:
 # Project Documents
 ***Google Drive Link: https://drive.google.com/drive/u/0/folders/1j5qABmOG9wIJpyJAjo0Ev4eBGWLs_8vg***
 
-***System Diagram***
-
-![SYSTEM MODULAR DIAGRAM - DIINA](https://user-images.githubusercontent.com/50558401/133746966-c2774640-01e5-4654-8c20-c9018ab7be93.jpg)
-
 # API:
 - Oculus LipSync
 - LipSync Pro
