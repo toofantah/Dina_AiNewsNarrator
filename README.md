@@ -65,10 +65,41 @@ after importing the character (with sets of blend shapes and propper Rig), It is
 
 ## Notes about the project (Art/developement)
 - 3D Character is created in Blender 2.93 
+- Substance Painter
+
 - Created in /07/2021
 ## Asset Development Process (Art):
 -
--
+
+
+
+https://user-images.githubusercontent.com/50558401/133750212-478d4f87-61d9-4991-89d0-6ebc56afa191.mp4
+
+
+
+![0](https://user-images.githubusercontent.com/50558401/133749937-e904fe6e-68cc-4121-ba9c-2e957f65675d.JPG)
+
+
+![1](https://user-images.githubusercontent.com/50558401/133749961-ef41a484-fd4b-40b8-b13f-d2d26396e0d1.JPG)
+
+
+![3](https://user-images.githubusercontent.com/50558401/133749979-8626f4a5-316a-4539-af51-c8bafabb1021.JPG)
+
+
+![4](https://user-images.githubusercontent.com/50558401/133750002-ae32fbd2-317b-48f1-aee1-737c50cf57ef.JPG)
+
+
+![5](https://user-images.githubusercontent.com/50558401/133750037-13db7c83-b732-4e9d-b4d8-5d48b7994d5f.JPG)
+
+
+![6](https://user-images.githubusercontent.com/50558401/133750053-62b2b5f7-e932-4d65-a18f-fa0fecca72c5.JPG)
+
+
+![7](https://user-images.githubusercontent.com/50558401/133750073-5c1d3261-70e4-4049-9bbc-bc79fd585934.JPG)
+
+
+
+
 
 
 ### For more inquiries and/or contacts  🔽: 
