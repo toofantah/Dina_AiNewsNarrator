@@ -22,7 +22,7 @@ Interactive AI Character:
 
 ## Project Configuration:
 
-#Blend Shapes Preset
+# Blend Shapes Preset
 
 after importing the character (with sets of blend shapes and propper Rig), It is time to configure facial expressions that used by runtime for procedural animations.
 
