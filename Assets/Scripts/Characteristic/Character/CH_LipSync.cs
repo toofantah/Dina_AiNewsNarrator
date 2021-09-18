@@ -21,7 +21,7 @@ public class CH_LipSync : MonoBehaviour
     [Tooltip("Lip synchronisation mode (realtime: based on mic input; pre-recorded: based on audio source clip).")]
     public LipSyncMode lipSyncMode;
 
-    // Delegate and event allowing the CH manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
+    // Delegate and event allowing the VHP manager to subscribe with a function that updates the character's blend shapes with the new emotions values as soon as they get updated.
     public delegate void OnLipChangeDelegate(float[] currentLipBlendShapeValues);
     public event OnLipChangeDelegate OnLipChange;
 
@@ -134,7 +134,7 @@ public class CH_LipSync : MonoBehaviour
     // Function to load the visemes max values from the blend shapes mapper added to the CH manager.
     private void LoadBlendShapeValues()
     {
-        // Loading the blend shapes mapper values to be used for lip synchronization if a mapper preset is added to the CH manager.
+        // Loading the blend shapes mapper values to be used for lip synchronization if a mapper preset is added to the VHP manager.
         if (m_CHmanager.blendShapesMapperPreset)
         {
             BlendShapesMapper blendShapesMapper = m_CHmanager.blendShapesMapperPreset;
@@ -198,7 +198,7 @@ public class CH_LipSync : MonoBehaviour
         }
     }
 
-    // Function to update the current lip blendshapes values and to trigger the event to allow the VHP manager to update the character's blendshapes.
+    // Function to update the current lip blendshapes values and to trigger the event to allow the CH manager to update the character's blendshapes.
     private void UpdateLipBlendShapeValues()
     {
         float[] currentLipBlendShapeValues = new float[m_CHmanager.TotalCharacterBlendShapes];
@@ -215,7 +215,9 @@ public class CH_LipSync : MonoBehaviour
                         currentLipBlendShapeValues[j] = 0;
 
                     currentLipBlendShapeValues[j] += (m_OVRLipSyncFrame.Visemes[i] * m_visemesBlendShapeValues[i][j]);
+                    //Debug.Log(m_visemesBlendShapeValues[i][j]);
                     currentLipBlendShapeValues[j] = Mathf.Clamp(currentLipBlendShapeValues[j], 0f, 100f);
+                    //Debug.Log(currentLipBlendShapeValues[j]);
                 }
             }
 
