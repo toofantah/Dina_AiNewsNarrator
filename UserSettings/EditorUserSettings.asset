@@ -35,6 +35,12 @@ EditorUserSettings:
     RecentlyUsedScenePath-9:
       value: 22424703114646680e0b0227036c7b3938362703220c293f3f1a1e30e7ee3176f7e93ffdfe
       flags: 0
+    UIBuilder.EditorExtensionModeKey:
+      value: 37434103
+      flags: 0
+    UIBuilder.HideNotificationAboutMissingUITKPackage:
+      value: 37434103
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

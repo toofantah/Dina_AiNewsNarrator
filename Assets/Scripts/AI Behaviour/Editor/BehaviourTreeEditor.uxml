@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="BehaviourTreeEditor.uss" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu display-tooltip-when-elided="true" text="Assets" />
+    </uie:Toolbar>
+    <SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="Right-Panel">
+            <InspectorView />
+            <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgba(37, 37, 37, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Left-Panel">
+            <ui:Label text="Tree View" display-tooltip-when-elided="true" />
+            <BehaviourTreeView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </SplitView>
+</ui:UXML>
