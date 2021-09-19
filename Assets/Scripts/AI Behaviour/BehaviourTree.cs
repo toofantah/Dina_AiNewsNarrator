@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = " DINA /Behaviour Tree")]
 public class BehaviourTree : ScriptableObject
 {
     public Node rootNode;
