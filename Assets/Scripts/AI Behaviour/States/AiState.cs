@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum AiStateId
 {
-    ChasePlayer
+    Idle,
+    Talking
 }
 public interface AiState
 {
