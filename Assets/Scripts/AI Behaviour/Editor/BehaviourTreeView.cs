@@ -8,6 +8,7 @@ using System.Linq;
 
 public class BehaviourTreeView : GraphView
 {
+    public Action<NodeView> onNodeSelected;
     public new class UxmlFactory : UxmlFactory<BehaviourTreeView, GraphView.UxmlTraits> { }
     BehaviourTree tree;
 
@@ -26,13 +27,33 @@ public class BehaviourTreeView : GraphView
         styleSheets.Add(styleSheet);
     }
 
+    NodeView FindNodeView(Node node)
+    {
+        return GetNodeByGuid(node.guid) as NodeView;
+    }
+
     internal void PopulateView(BehaviourTree tree)
     {
         this.tree = tree;
         graphViewChanged -= OnGraphViewChanged;
         //DeleteElements(graphElements);
         graphViewChanged += OnGraphViewChanged;
+        // creates node view
         tree.nodes.ForEach(n => CreateNodeView(n));
+        // creates edges
+        tree.nodes.ForEach(n =>
+        {
+            var children = tree.GetChildren(n);
+            children.ForEach(c =>
+            {
+                NodeView parentView = FindNodeView(n);
+                NodeView childView = FindNodeView(c);
+
+                Edge edge = parentView.output.ConnectTo(childView.input);
+                AddElement(edge);
+            });
+        });
+
     }
 
     public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -114,6 +135,7 @@ public class BehaviourTreeView : GraphView
     void CreateNodeView(Node node)
     {
         NodeView nodeView = new NodeView(node);
+        nodeView.onNodeSelected = onNodeSelected;
         AddElement(nodeView);
     }
 }
