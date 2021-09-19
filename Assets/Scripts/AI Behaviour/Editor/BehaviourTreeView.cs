@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 using System;
+using System.Linq;
 
 public class BehaviourTreeView : GraphView
 {
@@ -34,7 +35,12 @@ public class BehaviourTreeView : GraphView
         tree.nodes.ForEach(n => CreateNodeView(n));
     }
 
-    
+    public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
+    {
+        return ports.ToList().Where(endPort => endPort.direction != startPort.direction && endPort.node != startPort.node).ToList();
+    }
+
+
 
     private GraphViewChange OnGraphViewChanged(GraphViewChange graphViewChange)
     {
@@ -47,8 +53,27 @@ public class BehaviourTreeView : GraphView
                 {
                     tree.DeleteNode(nodeView.node);
                 }
+
+                Edge edge = elem as Edge;
+                if (edge != null)
+                {
+                    NodeView parentView = edge.output.node as NodeView;
+                    NodeView childView = edge.input.node as NodeView;
+                    tree.RemoveChild(parentView.node, childView.node);
+                }
             });
         }
+
+        if(graphViewChange.edgesToCreate != null)
+        {
+            graphViewChange.edgesToCreate.ForEach(edge =>
+            {
+                NodeView parentView = edge.output.node as NodeView;
+                NodeView childView = edge.input.node as NodeView;
+                tree.AddChild(parentView.node, childView.node);
+            });
+        }
+
         return graphViewChange;
     }
 
