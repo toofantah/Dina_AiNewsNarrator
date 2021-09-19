@@ -10,7 +10,7 @@ public class ProbabilisticGazeConfigurator : EditorWindow
     public List<Transform> gazeTargets = new List<Transform>();
 
     private List<GameObject> m_sceneGazeTargets = new List<GameObject>();
-    private string m_targetPrefabFolder = "Assets/Virtual Human Project/Prefabs/";
+    private string m_targetPrefabFolder = "Assets/Prefabs/";
     private bool m_deleteTargetSafetyEnabled = false;
 
     [MenuItem("Window/DINA Project/Probabilistic Gaze Configurator")]

@@ -6,6 +6,9 @@ using UnityEditor.UIElements;
 
 public class BehaviourTreeEditor : EditorWindow
 {
+    BehaviourTreeView treeView;
+    InspectorView inspectorView;
+
     [MenuItem("Dina/BehaviourTreeEditorEditor ...")]
     public static void OpenWindow()
     {
@@ -28,5 +31,17 @@ public class BehaviourTreeEditor : EditorWindow
         var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Scripts/AI Behaviour/Editor/BehaviourTreeEditor.uss");
         
         root.styleSheets.Add(styleSheet);
+
+        treeView = root.Q<BehaviourTreeView>();
+        inspectorView = root.Q<InspectorView>();
+    }
+
+    private void OnSelectionChange()
+    {
+        BehaviourTree tree = Selection.activeObject as BehaviourTree;
+        if (tree)
+        {
+            treeView.PopulateView(tree);
+        }
     }
 }
