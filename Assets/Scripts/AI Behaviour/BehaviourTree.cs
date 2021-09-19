@@ -104,4 +104,11 @@ public class BehaviourTree : ScriptableObject
 
         return children;
     }
+
+    public BehaviourTree Clone()
+    {
+        BehaviourTree tree = Instantiate(this);
+        tree.rootNode = tree.rootNode.Clone();
+        return tree;
+    }
 }
