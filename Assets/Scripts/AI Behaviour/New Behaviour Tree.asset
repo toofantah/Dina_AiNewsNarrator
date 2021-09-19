@@ -32,7 +32,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3f448856619e6a54280f2d8290fc85e3
-  position: {x: 0, y: 0}
+  position: {x: 318.56, y: 439.24}
   duration: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -46,13 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a583a10123448454bbf5f6cc6b5b16f0, type: 3}
   m_Name: New Behaviour Tree
   m_EditorClassIdentifier: 
-  rootNode: {fileID: 0}
+  rootNode: {fileID: 7764441910739007576}
   treeState: 0
   nodes:
   - {fileID: 2669078632411063568}
   - {fileID: -756825877154744534}
   - {fileID: 574942364217784134}
   - {fileID: -128683735340213575}
+  - {fileID: 7764441910739007576}
 --- !u!114 &574942364217784134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,3 +90,20 @@ MonoBehaviour:
   guid: 0fb115ee22f41fc4b8f298cae5fec813
   position: {x: 471, y: 333}
   message: 
+--- !u!114 &7764441910739007576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c52181c46bfd084eaecfc7cb99d2d80, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 06861d2f048bab34fac9187e63e3b66d
+  position: {x: 0, y: 0}
+  child: {fileID: 0}
