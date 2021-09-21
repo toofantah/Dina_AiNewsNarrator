@@ -16,7 +16,7 @@ MonoBehaviour:
   serviceUrl: 
   versionDate: 
   assistantId: 
-  tts_apikey: 5OnqUq4AnbJglqGVj0IRS0cS2PjiNGGu5tKEiANSsyrc
-  tts_serviceUrl: https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/1219eb26-989b-47e3-9201-1d46016ede04
+  tts_apikey: Z19RAslaI1ISCR_ISc9wE6cLMW5-xwV-ZopBE1zVqAQx
+  tts_serviceUrl: https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/d2fa7ec1-3bc3-4f07-98c3-3f1468eac0e3
   stt_apikey: 
   stt_serviceUrl: 
