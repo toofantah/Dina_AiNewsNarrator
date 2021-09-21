@@ -8,6 +8,13 @@ Interactive AI Character:
 # Project Documents
 ***Google Drive Link: https://drive.google.com/drive/u/0/folders/1j5qABmOG9wIJpyJAjo0Ev4eBGWLs_8vg***
 
+
+#Preview:
+
+
+https://user-images.githubusercontent.com/50558401/134223225-c0a6b573-2cf0-436e-ad1f-28fd90c0bce8.mp4
+
+
 # API:
 - Oculus LipSync
 - LipSync Pro
