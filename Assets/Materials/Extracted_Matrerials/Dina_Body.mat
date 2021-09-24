@@ -22,10 +22,10 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Dina_Body
   m_Shader: {fileID: -6465566751694194690, guid: c53a6a3ce94fa7e4cae17ce5c279d092, type: 3}
-  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _DOUBLESIDED_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2225
   stringTagMap:
     MotionVector: User
@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_944A8CEA:
-        m_Texture: {fileID: 2800000, guid: e4032f8fe0378bc45a0a689e4046acbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: c274f44919f060d4ea67194b39a006ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_C372CA79:
@@ -163,21 +163,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1F3F727: 0.241
-    - Vector1_4594755B: 0.901
-    - Vector1_5C35C3A3: 0
+    - Vector1_1F3F727: 0.236
+    - Vector1_4594755B: 1
+    - Vector1_5C35C3A3: 0.042
     - Vector1_8ECA1AAB: 0
     - Vector1_A4DD253D: 1
-    - Vector1_A5B41E93: 0.466
-    - Vector1_CB2241EB: 0.652
+    - Vector1_A5B41E93: 0.607
+    - Vector1_CB2241EB: 0.236
     - Vector1_DB1E606E: 0.266
-    - Vector1_E08D9B42: 0.185
+    - Vector1_E08D9B42: 0.133
     - Vector1_E3050DFD: 0.15
-    - Vector1_EE39CFC0: 0.868
+    - Vector1_EE39CFC0: 0.842
     - Vector1_EE3F7786: 1
     - Vector1_EFCC394B: 1
     - Vector1_F0016C4E: 0
-    - Vector1_F70C3F93: 1.026
+    - Vector1_F70C3F93: 2
     - _AORemapMax: 0.99999994
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -196,8 +196,8 @@ Material:
     - _BlendMode: 0
     - _BumpScale: 1
     - _CoatMask: 0.753
-    - _CullMode: 2
-    - _CullModeForward: 2
+    - _CullMode: 0
+    - _CullModeForward: 0
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
@@ -209,7 +209,7 @@ Material:
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
-    - _DoubleSidedEnable: 0
+    - _DoubleSidedEnable: 1
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
     - _EmissiveColorMode: 1
@@ -303,7 +303,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Vector4_252EC246: {r: 50, g: 50, b: 0, a: 0}
-    - Vector4_4046014A: {r: 50, g: 50, b: 0, a: 0}
+    - Vector4_4046014A: {r: 50, g: 50, b: 50, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
