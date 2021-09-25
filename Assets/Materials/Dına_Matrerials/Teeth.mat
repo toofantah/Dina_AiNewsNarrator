@@ -21,9 +21,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Teeth
-  m_Shader: {fileID: -6465566751694194690, guid: 17e5d5ca3dbc3b2468f5e40cd35fc7cd, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_ShaderKeywords: TEETH_ATTN_TEETH_ATTN_SKYPOLYGON TEETH_DATA_TEETH_DATA_FIXED_6
-    _DISABLE_SSR_TRANSPARENT
+    _DISABLE_SSR_TRANSPARENT _NORMALMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_CAAE629C:
-        m_Texture: {fileID: 2800000, guid: 2b76d64624d559248817e5d17af5e454, type: 3}
+        m_Texture: {fileID: 2800000, guid: c7228710334f72547b7f5ebf86afea65, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_E55E8C35:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 29f815f87aa0295459226f0f69fb7a35, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -120,7 +120,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 29f815f87aa0295459226f0f69fb7a35, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -191,9 +191,9 @@ Material:
     - Vector1_6D6A085A: 0
     - Vector1_928EF644: 0
     - Vector1_929B4C1A: 1
-    - Vector1_B67B9F00: 0
+    - Vector1_B67B9F00: 1
     - Vector1_BF465F41: 1
-    - Vector1_D224AD90: 0.368
+    - Vector1_D224AD90: 0.29
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -259,7 +259,7 @@ Material:
     - _MetallicRemapMin: 0
     - _Mode: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 2.1
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
@@ -283,10 +283,10 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
-    - _StencilRef: 4
+    - _StencilRef: 0
     - _StencilRefDepth: 8
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 14
+    - _StencilRefGBuffer: 10
     - _StencilRefMV: 40
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 8
@@ -320,9 +320,9 @@ Material:
     m_Colors:
     - Color_CF785A7E: {r: 1, g: 1, b: 1, a: 0}
     - Vector4_EE94FD5A: {r: 1, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 0.9669811, b: 0.9669811, a: 0}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.9669811, b: 0.9669811, a: 0}
     - _DiffusionProfileAsset: {r: 6.872552e+19, g: -5.877919e-36, b: -6.0285914e-30, a: -6.3348165e+35}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
