@@ -23,7 +23,7 @@ public class HierarchyRecorder : MonoBehaviour
 
 
         // Set it up to record the transforms recursively.
-        m_Recorder.BindComponentsOfType<Transform>(gameObject, true);
+        m_Recorder.BindComponentsOfType<MeshRenderer>(gameObject, true);
     }
 
     // The recording needs to be done in LateUpdate in order
