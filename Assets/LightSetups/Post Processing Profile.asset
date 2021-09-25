@@ -70,7 +70,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -21
     min: -100
     max: 100
   tint:
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9008a067f4d626c4d8bc4bc48f04bb89, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
@@ -152,12 +152,12 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.57
     min: 0
     max: 4
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.68
     min: 0
     max: 1
   radius:
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_Value: 0
   m_MaximumRadiusInPixels:
     m_OverrideState: 1
-    m_Value: 16
+    m_Value: 55
     min: 16
     max: 256
   m_BilateralUpsample:
@@ -272,12 +272,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 3
   enable:
     m_OverrideState: 1
     m_Value: 1
   length:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.15
     min: 0
     max: 1
@@ -443,7 +443,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 9
+    m_Value: 9.000001
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 1
   quality:
     m_OverrideState: 1
@@ -724,11 +724,11 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.35
+    m_Value: 0.5
     min: 0
     max: 1
   response:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.8
     min: 0
     max: 1
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b6af8f7ad32324cb6941c3290e5895, type: 3}
   m_Name: MicroShadowing
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   enable:
     m_OverrideState: 1
@@ -901,10 +901,10 @@ MonoBehaviour:
   diffusionProfiles:
     m_OverrideState: 1
     m_Value:
-    - {fileID: 11400000, guid: ed44f1d6cc2699e4aa53625cb27382c0, type: 2}
-    - {fileID: 11400000, guid: b59650a01e593424e9624e28c6dca7fe, type: 2}
-    - {fileID: 11400000, guid: 23f391a2a3f2684448dceb88119e75d7, type: 2}
-    - {fileID: 11400000, guid: 483d2efe3b6c29f41aced0ea368a5a2d, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
 --- !u!114 &5378815861597440097
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -952,8 +952,7 @@ MonoBehaviour:
     min: 0.001
   lutTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 8534537815417165676, guid: a1e7d4fc54a711642aa5d342c2fae396,
-      type: 3}
+    m_Value: {fileID: 8534537815417165676, guid: a1e7d4fc54a711642aa5d342c2fae396, type: 3}
   lutContribution:
     m_OverrideState: 1
     m_Value: 1
