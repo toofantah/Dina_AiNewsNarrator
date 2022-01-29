@@ -14,7 +14,7 @@ Interactive AI Character:
 
 https://user-images.githubusercontent.com/50558401/134223225-c0a6b573-2cf0-436e-ad1f-28fd90c0bce8.mp4
 
-
+Third Parties
 # API:
 - Oculus LipSync
 - LipSync Pro
